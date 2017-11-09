@@ -38,7 +38,7 @@ namespace TriangleCalculations
         {
             if (!LookupDictionary.ContainsKey(columnNumber))
                 throw new ArgumentOutOfRangeException(nameof(columnNumber), "Provided " + columnNumber + " is out of bounds.  Valid numbers are 1-6");
-            return LookupDictionary.FirstOrDefault(l => l.Key == columnNumber).Value;
+            return LookupDictionary[columnNumber];
         }
 
         /// <summary>
